@@ -1,3 +1,10 @@
+/* Add rules to control scrolling behavior */
+html, body {
+    overflow: visible !important;
+    height: auto !important;
+    min-height: 100%;
+}
+
 /* Reset and base styles */
 .shake-builder-container * {
     box-sizing: border-box;
@@ -13,7 +20,10 @@
     background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
-    position: relative; /* Create positioning context */
+    position: relative;
+    overflow: visible !important;
+    height: auto !important;
+    min-height: 100%;
 }
 
 /* Main content area with reduced padding */
