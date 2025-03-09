@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition-Packed Shake Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="shake-builder-container">
+        <!-- Sticky nutrition header -->
+        <div class="sticky-nutrition-header">
+            <h3 class="nutrition-title">YOUR SHAKE NUTRITION</h3>
+            <div class="nutrition-grid">
+                <div class="nutrition-item">
+                    <div class="nutrition-label">Calories</div>
+                    <div class="nutrition-value" id="total-calories">0</div>
+                </div>
+                <div class="nutrition-item">
+                    <div class="nutrition-label">Protein</div>
+                    <div class="nutrition-value" id="total-protein">0g</div>
+                </div>
+                <div class="nutrition-item">
+                    <div class="nutrition-label">Carbs</div>
+                    <div class="nutrition-value" id="total-carbs">0g</div>
+                </div>
+                <div class="nutrition-item">
+                    <div class="nutrition-label">Fat</div>
+                    <div class="nutrition-value" id="total-fat">0g</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main content area -->
+        <div class="shake-builder-content">
+            <h1>BUILD YOUR NUTRITION-PACKED SHAKE</h1>
+            
+            <!-- Size Selector -->
+            <div class="size-selector">
+                <div class="size-option" data-size="small">Small (350 ml)</div>
+                <div class="size-option selected" data-size="medium">Medium (470 ml)</div>
+                <div class="size-option" data-size="large">Large (590 ml)</div>
+            </div>
+            
+            <!-- Step 1 -->
+            <div class="step-container">
+                <div class="step-title">
+                    <div class="step-number">1</div>
+                    <h2>Choose Your Base (Select One)</h2>
+                </div>
+                <p>This will be the foundation of your shake.</p>
+                
+                <div class="options-container">
+                    <div class="option-item" data-type="radio" data-group="base">
+                        <div class="option-name">
+                            <input type="radio" name="base" id="almond-milk">
+                            <label for="almond-milk">🥛 Almond Milk</label>
+                        </div>
+                        <div class="option-nutrition">
+                            <div>Calories: 40</div>
+                            <div>Protein: 1g</div>
+                            <div>Carbs: 2g</div>
+                            <div>Fat: 3g</div>
+                        </div>
+                    </div>
+                    
+                    <div class="option-item" data-type="radio" data-group="base">
+                        <div class="option-name">
+                            <input type="radio" name="base" id="skimmed-milk">
+                            <label for="skimmed-milk">🥛 Skimmed Milk</label>
+                        </div>
+                        <div class="option-nutrition">
+                            <div>Calories: 90</div>
+                            <div>Protein: 8g</div>
+                            <div>Carbs: 12g</div>
+                            <div>Fat: 0.5g</div>
+                        </div>
+                    </div>
+                    
+                    <div class="option-item" data-type="radio" data-group="base">
+                        <div class="option-name">
+                            <input type="radio" name="base" id="oat-milk">
+                            <label for="oat-milk">🥛 Oat Milk</label>
+                        </div>
+                        <div class="option-nutrition">
+                            <div>Calories: 120</div>
+                            <div>Protein: 3g</div>
+                            <div>Carbs: 16g</div>
+                            <div>Fat: 5g</div>
+                        </div>
+                    </div>
+                    
+                    <div class="option-item" data-type="radio" data-group="base">
+                        <div class="option-name">
+                            <input type="radio" name="base" id="greek-yogurt">
+                            <label for="greek-yogurt">🥛 Greek Yogurt</label>
+                        </div>
+                        <div class="option-nutrition">
+                            <div>Calories: 130</div>
+                            <div>Protein: 15g</div>
+                            <div>Carbs: 8g</div>
+                            <div>Fat: 3g</div>
+                        </div>
+                    </div>
+                    
+                    <div class="option-item" data-type="radio" data-group="base">
+                        <div class="option-name">
+                            <input type="radio" name="base" id="coconut-water">
+                            <label for="coconut-water">🥥 Coconut Water</label>
+                        </div>
+                        <div class="option-nutrition">
+                            <div>Calories: 45</div>
+                            <div>Protein: 0.5g</div>
+                            <div>Carbs: 11g</div>
+                            <div>Fat: 0.5g</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="step-container">
+                <div class="step-title">
+                    <div class="step-number">2</div>
+                    <h2>Add Fruits & Greens (Select One or More)</h2>
+                </div>
+                <p>Fresh ingredients to boost flavor and nutrition.</p>
+                
+                <div class="options-container">
+                    <div class="option-item" data-type="checkbox">
+                        <div class="option-name">
+                            <input type="checkbox" id="strawberry">
+                            <label for="strawberry">🍓 Strawberry</label>
+                        </div>
+                        <div class="option-nutrition">
+                            <div>Calories: 50</div>
+                            <div>Protein: 1g</div>
+                            <div>Carbs: 11g</div>
+                            <div>Fat: 0.5g</div>
+                        </div>
+                    </div>
+                    
+                    <div class="option-item" data-type="checkbox">
+                        <div class="option-name">
+                            <input type="checkbox" id="blueberry">
+                            <label for="blueberry">🫐 Blueberry</label>
+                        </div>
+                        <div class="option-nutrition">
+                            <div>Calories: 40</div>
+                            <div>Protein: 0.5g</div>
+                            <div>Carbs: 10g</div>
+                            <div>Fat: 0.3g</div>
+                        </div>
+                    </div>
+                    
+                    <div class="option-item" data-type="checkbox">
+                        <div class="option-name">
+                            <input type="checkbox" id="banana">
+                            <label for="banana">🍌 Banana</label>
+                        </div>
+                        <div class="option-nutrition">
+                            <div>Calories: 105</div>
+                            <div>Protein: 1.3g</div>
+                            <div>Carbs: 27g</div>
+                            <div>Fat: 0.4g</div>
+                        </div>
+                    </div>
+                    
+                    <div class="option-item" data-type="checkbox">
+                        <div class="option-name">
+                            <input type="checkbox" id="spinach">
+                            <label for="spinach">🍃 Spinach</label>
+                        </div>
+                        <div class="option-nutrition">
+                            <div>Calories: 12</div>
+                            <div>Protein: 1.2g</div>
+                            <div>Carbs: 1.8g</div>
+                            <div>Fat: 0.2g</div>
+                        </div>
+                    </div>
+                    
+                    <div class="option-item" data-type="checkbox">
+                        <div class="option-name">
+                            <input type="checkbox" id="avocado">
+                            <label for="avocado">🥑 Avocado</label>
+                        </div>
+                        <div class="option-nutrition">
+                            <div>Calories: 160</div>
+                            <div>Protein: 2g</div>
+                            <div>Carbs: 8g</div>
+                            <div>Fat: 15g</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="step-container">
+                <div class="step-title">
+                    <div class="step-number">3</div>
+                    <h2>Power Up Your Shake (Select One or More)</h2>
+                </div>
+                <p>Add more substance and flavor to your shake.</p>
+                
+                <div class="options-container">
+                    <div class="option-item" data-type="checkbox">
+                        <div class="option-name">
+                            <input type="checkbox" id="oats-powder">
+                            <label for="oats-powder">🌾 Oats Powder</label>
+                        </div>
+                        <div class="option-nutrition">
+                            <div>Calories: 110</div>
+                            <div>Protein: 4g</div>
+                            <div>Carbs: 19g</div>
+                            <div>Fat: 2g</div>
+                        </div>
+                    </div>
+                    
+                    <div class="option-item" data-type="checkbox">
+                        <div class="option-name">
+                            <input type="checkbox" id="protein-peanut-butter">
+                            <label for="protein-peanut-butter">🥜 Protein Peanut Butter</label>
+                        </div>
+                        <div class="option-nutrition">
+                            <div>Calories: 190</div>
+                            <div>Protein: 9g</div>
+                            <div>Carbs: 6g</div>
+                            <div>Fat: 16g</div>
+                        </div>
+                    </div>
+                    
+                    <div class="option-item" data-type="checkbox">
+                        <div class="option-name">
+                            <input type="checkbox" id="honey">
+                            <label for="honey">🍯 Honey</label>
+                        </div>
+                        <div class="option-nutrition">
+                            <div>Calories: 60</div>
+                            <div>Protein: 0g</div>
+                            <div>Carbs: 17g</div>
+                            <div>Fat: 0g</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Step 4 -->
+            <div class="step-container">
+                <div class="step-title">
+                    <div class="step-number">4</div>
+                    <h2>Choose Your Protein (Optional)</h2>
+                </div>
+                <p>Add an extra protein boost to your shake.</p>
+                
+                <div class="options-container">
+                    <div class="option-item" data-type="checkbox">
+                        <div class="option-name">
+                            <input type="checkbox" id="whey-protein">
+                            <label for="whey-protein">💪 Whey Protein</label>
+                        </div>
+                        <div class="option-nutrition">
+                            <div>Calories: 120</div>
+                            <div>Protein: 25g</div>
+                            <div>Carbs: 3g</div>
+                            <div>Fat: 1g</div>
+                        </div>
+                    </div>
+                    
+                    <div class="option-item" data-type="checkbox">
+                        <div class="option-name">
+                            <input type="checkbox" id="plant-protein">
+                            <label for="plant-protein">🌱 Plant Protein</label>
+                        </div>
+                        <div class="option-nutrition">
+                            <div>Calories: 130</div>
+                            <div>Protein: 22g</div>
+                            <div>Carbs: 5g</div>
+                            <div>Fat: 2g</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Step 5 -->
+            <div class="step-container">
+                <div class="step-title">
+                    <div class="step-number">5</div>
+                    <h2>Boost with Superfoods (Select One or More)</h2>
+                </div>
+                <p>Top off your shake with nutritious superfoods.</p>
+                
+                <div class="options-container">
+                    <div class="option-item" data-type="checkbox">
+                        <div class="option-name">
+                            <input type="checkbox" id="chia-seeds">
+                            <label for="chia-seeds">🌱 Chia Seeds</label>
+                        </div>
+                        <div class="option-nutrition">
+                            <div>Calories: 60</div>
+                            <div>Protein: 2g</div>
+                            <div>Carbs: 5g</div>
+                            <div>Fat: 4g</div>
+                        </div>
+                    </div>
+                    
+                    <div class="option-item" data-type="checkbox">
+                        <div class="option-name">
+                            <input type="checkbox" id="flaxseeds">
+                            <label for="flaxseeds">🌱 Flaxseeds</label>
+                        </div>
+                        <div class="option-nutrition">
+                            <div>Calories: 55</div>
+                            <div>Protein: 2g</div>
+                            <div>Carbs: 3g</div>
+                            <div>Fat: 4.5g</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
