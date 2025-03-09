@@ -14,14 +14,12 @@
     color: #333;
     line-height: 1.6;
     position: relative; /* Create positioning context */
-    overflow: visible;
 }
 
-/* Main content area with reduced padding to fix spacing issue */
+/* Main content area with reduced padding */
 .shake-builder-content {
     padding: 20px;
-    padding-top: 40px; /* Reduced from 140px to fix the large gap */
-    margin-top: 10px; /* Add a small margin for separation */
+    padding-top: 40px; /* Reduced from 140px */
 }
 
 /* Typography */
@@ -44,10 +42,9 @@
     margin-bottom: 10px; /* Reduced from 15px */
 }
 
-/* Compact sticky header with nutrition info */
+/* Fixed-position header instead of sticky */
 .sticky-nutrition-header {
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -55,9 +52,8 @@
     color: white;
     border-radius: 0 0 8px 8px;
     padding: 8px 15px; /* Reduced from 12px 15px */
-    z-index: 100;
+    z-index: 1000; /* Increased z-index */
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: 10px; /* Add space after the header */
 }
 
 .nutrition-title {
@@ -214,11 +210,6 @@
     
     .shake-builder-container h2 {
         font-size: 1.2rem;
-    }
-    
-    /* Adjust padding for smaller sticky header on mobile */
-    .shake-builder-content {
-        padding-top: 40px; /* Reduced from 120px */
     }
 }
 
