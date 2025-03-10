@@ -42,12 +42,8 @@
     margin-bottom: 10px;
 }
 
-/* Properly configured sticky header */
+/* Nutrition header - will be positioned by JavaScript */
 .sticky-nutrition-header {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    left: 0;
     width: 100%;
     background-color: #1B5E20;
     color: white;
@@ -55,6 +51,7 @@
     padding: 8px 15px;
     z-index: 100;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    /* JavaScript will handle the positioning */
 }
 
 .nutrition-title {
@@ -214,7 +211,7 @@
     }
     
     .shake-builder-content {
-        padding-top: 100px; /* Adjust for smaller header */
+        padding-top: 100px;
     }
 }
 
